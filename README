@@ -1,4 +1,20 @@
 Death To .DS_Store
+I contacted apple support with .DS_Store appeared after I restored a reinstalled mac and gave the following instructions
+Your support Advisor has a follow-up message for you.
+Login to your main profile.
+Open terminal to type the following:
+
+defaults write com.apple.finder AppleShowAllFiles FALSE
+
+Then press Enter
+
+Once that is done, you will need to type this next in Terminal:
+
+killall Finder
+
+Then press enter and that will hide all files/folders that are normally hidden from view.
+
+That should reside all the files that are normally hidden, unless you have done a command on them. 
 
 The .DS_Store file is an abomination and should be stopped. This project live-patches the Finder on 10.6-10.10 64-bit Macs to no longer produce .DS_Store files. It does not actually alter the Finder app and must be run every time the Finder relaunches. It requires admin privileges to work and can be run on the command line with the -silent option. Contains an (optional) installable Launch Agent so it will patch the Finder every time a user logs in.
 
